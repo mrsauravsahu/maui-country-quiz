@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 
+using DotNet.Meteor.HotReload.Plugin;
 namespace CountryQuiz;
+
 
 public static class MauiProgram
 {
@@ -8,8 +10,11 @@ public static class MauiProgram
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
-			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
+      .UseMauiApp<App>()
+#if DEBUG
+    	.EnableHotReload()
+#endif
+      .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
