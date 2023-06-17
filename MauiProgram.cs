@@ -24,6 +24,9 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		return builder.Build();
+		Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
+
+
+        return builder.Build();
 	}
 }

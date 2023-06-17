@@ -11,4 +11,9 @@
         Shell.BackgroundColor="White"
         Route="MainPage" />
     <!-- TODO: Convert BackgroundColor to a style -->
+
+    <ShellContent
+        ContentTemplate="{DataTemplate local:SettingsPage}"
+        Shell.BackgroundColor="White"
+        Route="SettingsPage" />
 </Shell>

@@ -24,4 +24,9 @@ public partial class MainPage : ContentPage
             rotator *= -1;
         }
     }
+
+    async void SettingsButton_Clicked(System.Object sender, System.EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(SettingsPage));
+    }
 }

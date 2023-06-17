@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CountryQuiz.MainPage"
+             Shell.NavBarIsVisible="False"
+             Title="Country Quiz"
              Loaded="ContentPage_Loaded">
                    
         <VerticalStackLayout>
@@ -46,10 +48,10 @@
                 <Button Grid.Column="1" HorizontalOptions="FillAndExpand" Text="Start"
                         FontAttributes="Bold"
                         Margin="4" />
-
                 <Button Grid.Column="1" HorizontalOptions="FillAndExpand" Text="Settings"
                         FontAttributes="Bold"
-                        Margin="4" />
+                        Margin="4"
+                        Clicked="SettingsButton_Clicked" />
                </VerticalStackLayout>
                </Grid>
         </VerticalStackLayout>
