@@ -6,3 +6,5 @@ playground
 .meteor
 .vs
 
+.DS_Store
+
