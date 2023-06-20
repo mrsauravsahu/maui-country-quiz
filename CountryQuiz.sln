@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A3FEB1E1-5893-4E90-9BD5-7D31D93A97B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz", "src\CountryQuiz\CountryQuiz.csproj", "{B6FFB970-E03B-4AE2-BCF3-8C95AED4995A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.Ui", "src\CountryQuiz.Ui\CountryQuiz.Ui.csproj", "{B6FFB970-E03B-4AE2-BCF3-8C95AED4995A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.ViewModels", "src\CountryQuiz.ViewModels\CountryQuiz.ViewModels.csproj", "{404AF52E-C315-4A07-9C1C-5CE1E8DA71AE}"
 EndProject
