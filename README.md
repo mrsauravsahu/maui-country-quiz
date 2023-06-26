@@ -10,3 +10,8 @@ A quiz app to learn .NET MAUI Development.
 - Theme support (dark/light)
 - Demonstration of clean architecture and splitting of various sharable code
 
+## Screenshots
+
+Home Page | Quiz | Settings
+--- | --- | ---
+![Screenshot of the home page](assets/home.png) | ![Screenshot of the quiz page](assets/quiz.png) | ![Screenshot of the settings page](assets/settings.png)
