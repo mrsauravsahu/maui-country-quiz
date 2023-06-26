@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A3FEB1E1-589
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.Ui", "src\CountryQuiz.Ui\CountryQuiz.Ui.csproj", "{B6FFB970-E03B-4AE2-BCF3-8C95AED4995A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.ViewModels.Tests", "src\CountryQuiz.ViewModels.Tests\CountryQuiz.ViewModels.Tests.csproj", "{396E7A07-3768-46D8-9099-ADBE2F76D8CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.ViewModels.Tests", "tests\CountryQuiz.ViewModels.Tests\CountryQuiz.ViewModels.Tests.csproj", "{396E7A07-3768-46D8-9099-ADBE2F76D8CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.ViewModels", "src\CountryQuiz.ViewModels\CountryQuiz.ViewModels.csproj", "{48EF7B65-6BCA-4B3D-9F67-896E01616D8D}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.Services", "src\CountryQuiz.Services\CountryQuiz.Services.csproj", "{8340108E-8A70-4986-8232-B0D4F9B2BD6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryQuiz.Services.Tests", "tests\CountryQuiz.Services.Tests\CountryQuiz.Services.Tests.csproj", "{C93A4C58-5A34-40E2-93DE-E7FC6D133414}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7894E75A-B0E6-4311-8939-C17F8F3AAD38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +55,10 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B6FFB970-E03B-4AE2-BCF3-8C95AED4995A} = {A3FEB1E1-5893-4E90-9BD5-7D31D93A97B0}
-		{396E7A07-3768-46D8-9099-ADBE2F76D8CD} = {A3FEB1E1-5893-4E90-9BD5-7D31D93A97B0}
+		{396E7A07-3768-46D8-9099-ADBE2F76D8CD} = {7894E75A-B0E6-4311-8939-C17F8F3AAD38}
 		{48EF7B65-6BCA-4B3D-9F67-896E01616D8D} = {A3FEB1E1-5893-4E90-9BD5-7D31D93A97B0}
 		{AF4C93BA-BB7B-4736-92CD-F742E8E5D5F6} = {A3FEB1E1-5893-4E90-9BD5-7D31D93A97B0}
 		{8340108E-8A70-4986-8232-B0D4F9B2BD6E} = {A3FEB1E1-5893-4E90-9BD5-7D31D93A97B0}
-		{C93A4C58-5A34-40E2-93DE-E7FC6D133414} = {A3FEB1E1-5893-4E90-9BD5-7D31D93A97B0}
+		{C93A4C58-5A34-40E2-93DE-E7FC6D133414} = {7894E75A-B0E6-4311-8939-C17F8F3AAD38}
 	EndGlobalSection
 EndGlobal
