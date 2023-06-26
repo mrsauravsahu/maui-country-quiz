@@ -2,11 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CountryQuiz.MainPage"
+             xmlns:vm="clr-namespace:CountryQuiz.ViewModels;assembly=CountryQuiz.ViewModels"
              Shell.NavBarIsVisible="False"
              Title="Country Quiz"
-             Loaded="ContentPage_Loaded">
+             Loaded="ContentPage_Loaded"
+             xmlns:utils="clr-namespace:CountryQuiz.Utils;assembly=CountryQuiz.Utils"
+             x:DataType="{x:Type vm:MainPageViewModel}">
+        <ContentPage.Resources>
+            <utils:ShuffleValueConverter x:Key="ShuffleValueConverter" />
+        </ContentPage.Resources>
                    
-        <VerticalStackLayout>
+        <Grid RowDefinitions="auto,*,auto,*">
             <VerticalStackLayout VerticalOptions="Center">
                  <Label
                     x:Name="CountryLabel1"
@@ -30,6 +36,7 @@
                      LineBreakMode="NoWrap"/>
             </VerticalStackLayout>
             <Grid
+                Grid.Row="2"
                 VerticalOptions="End"
                 ColumnDefinitions="*,2*,*" 
                 RowDefinitions="auto,*">
@@ -48,13 +55,14 @@
                     Grid.Column="1">
                 <Button Grid.Column="1" HorizontalOptions="FillAndExpand" Text="Start"
                         FontAttributes="Bold"
-                        Margin="4" />
+                        Margin="4"
+                        Command="{Binding StartQuizCommand}" />
                 <Button Grid.Column="1" HorizontalOptions="FillAndExpand" Text="Settings"
                         FontAttributes="Bold"
                         Margin="4"
-                        Clicked="SettingsButton_Clicked" />
+                        Command="{Binding NavigateToSettingsPageCommand}" />
                </VerticalStackLayout>
                </Grid>
-        </VerticalStackLayout>
+        </Grid>
 
 </ContentPage>

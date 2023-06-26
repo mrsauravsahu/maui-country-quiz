@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -6,18 +7,17 @@ namespace CountryQuiz.ViewModels
 {
 	public partial class MainPageViewModel: ObservableObject
 	{
-		public MainPageViewModel()
-		{
-
-		}
-
 		[RelayCommand]
-		public void NavigateToSettingsPage()
+		public async Task NavigateToSettingsPage()
 		{
-			//AppShell
+			await Shell.Current.GoToAsync(nameof(SettingsPageViewModel));
 		}
 
-
-	}
+        [RelayCommand]
+        public async Task StartQuiz()
+        {
+            await Shell.Current.GoToAsync(nameof(QuizPageViewModel));
+        }
+    }
 }
 

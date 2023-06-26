@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CountryQuiz.QuizPage"
+             Shell.NavBarIsVisible="True"
+             Title="Country Quiz">
+                   
+        <StackLayout Padding="16">
+            <Label Text="Round 1"
+                    FontSize="Title"
+                    TextTransform="Uppercase"
+                    HorizontalOptions="Center" />
+
+            <Label Text="Which country's flag is this?"
+                    FontSize="12"
+                    TextTransform="Uppercase"
+                    HorizontalOptions="Center" />
+            <StackLayout>
+
+
+                <Label Text="🇮🇳"
+                       FontSize="128"
+                       HorizontalOptions="Center" />
+
+                <CollectionView HeightRequest="236">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>India</x:String>
+                            <x:String>Sri Lanka</x:String>
+                            <x:String>Nepal</x:String>
+                            <x:String>Thailand</x:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="*">
+                                <Border StrokeShape="RoundRectangle 10, 10, 10, 10">
+                                    <Label Text="{Binding}"
+                                           FontSize="12"
+                                           TextTransform="Uppercase"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           Padding="20"/>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Button Text="Submit"
+                        Margin="0, 10, 0, 0"
+                        BackgroundColor="MediumSeaGreen"
+                        CornerRadius="24"
+                        BorderWidth="0"/>
+                <Button Text="Skip"
+                        Margin="0, 10, 0, 0"
+                        BackgroundColor="LightGreen"
+                        CornerRadius="24"
+                        BorderWidth="0"/>
+            </StackLayout>
+        </StackLayout>
+
+</ContentPage>

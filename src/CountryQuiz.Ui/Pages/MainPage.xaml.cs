@@ -1,13 +1,15 @@
-﻿using Microsoft.Maui.Controls;
+﻿using CountryQuiz.ViewModels;
+using Microsoft.Maui.Controls;
 
 namespace CountryQuiz;
 
 public partial class MainPage : ContentPage
 {
 
-	public MainPage()
+	public MainPage(MainPageViewModel vm)
 	{
 		InitializeComponent();
+        BindingContext = vm;
 	}
 
     async void ContentPage_Loaded(System.Object sender, System.EventArgs e)

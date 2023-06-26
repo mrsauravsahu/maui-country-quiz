@@ -60,11 +60,12 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\CountryQuiz.ViewModels\CountryQuiz.ViewModels.csproj" />
+	  <ProjectReference Include="..\CountryQuiz.Utils\CountryQuiz.Utils.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-	  <None Remove="Components\" />
+	  <None Remove="Resources\Raw\Countries.json" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Components\" />
+	  <BundleResource Include="Resources\Raw\Countries.json" />
 	</ItemGroup>
 </Project>
