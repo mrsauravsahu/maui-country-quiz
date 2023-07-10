@@ -1,4 +1,4 @@
-﻿namespace CountryQuiz.Services.Tests;
+namespace CountryQuiz.Services.Tests;
 
 using System.Collections.Generic;
 using System.Net;
@@ -13,15 +13,15 @@ using FluentAssertions;
 
 public class CountryServiceTests
 {
-    [Fact]
-    public async Task GetContinents_ReturnsAllContinents()
+  [Fact]
+  public async Task ShouldReturnContinentsDataWithCountries()
+  {
+    var mockHttpMessageHandler = new Mock<HttpMessageHandler>();
+    var expectedResponse = JsonSerializer.Serialize(new GraphQLResponse
     {
-        var mockHttpMessageHandler = new Mock<HttpMessageHandler>();
-        var expectedResponse = JsonSerializer.Serialize(new GraphQLResponse
-        {
-            Data = new GraphQLData
-            {
-                Continents = new List<Continent>
+      Data = new GraphQLData
+      {
+        Continents = new List<Continent>
                 {
                     new Continent {
                         Name = "Continent 1",
@@ -37,32 +37,32 @@ public class CountryServiceTests
                         }
                     }
                 }
-            }
-        });
+      }
+    });
 
-        var httpResponseMessage = new HttpResponseMessage
-        {
-            StatusCode = HttpStatusCode.OK,
-            Content = new StringContent(expectedResponse)
-        };
+    var httpResponseMessage = new HttpResponseMessage
+    {
+      StatusCode = HttpStatusCode.OK,
+      Content = new StringContent(expectedResponse)
+    };
 
-        mockHttpMessageHandler
-            .Protected()
-            .Setup<Task<HttpResponseMessage>>(
-                "SendAsync",
-                ItExpr.IsAny<HttpRequestMessage>(),
-                ItExpr.IsAny<CancellationToken>()
-            )
-            .ReturnsAsync(httpResponseMessage);
+    mockHttpMessageHandler
+        .Protected()
+        .Setup<Task<HttpResponseMessage>>(
+            "SendAsync",
+            ItExpr.IsAny<HttpRequestMessage>(),
+            ItExpr.IsAny<CancellationToken>()
+        )
+        .ReturnsAsync(httpResponseMessage);
 
-        var httpClient = new HttpClient(mockHttpMessageHandler.Object);
-        var countryService = new CountryService(httpClient);
+    var httpClient = new HttpClient(mockHttpMessageHandler.Object);
+    var countryService = new CountryService(httpClient);
 
-        var continents = await countryService.GetContinentsWithCountries();
+    var continents = await countryService.GetContinentsWithCountries();
 
-        continents.Should().NotBeNull();
+    continents.Should().NotBeNull();
 
-        continents.Should().BeEquivalentTo(new List<Continent>
+    continents.Should().BeEquivalentTo(new List<Continent>
         {
             new Continent
             {
@@ -79,5 +79,5 @@ public class CountryServiceTests
                 }
             },
         });
-    }
+  }
 }

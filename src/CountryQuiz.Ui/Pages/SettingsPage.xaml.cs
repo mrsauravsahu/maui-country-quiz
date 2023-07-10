@@ -1,12 +1,12 @@
-﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls;
 
 namespace CountryQuiz;
 
 public partial class SettingsPage : ContentPage
 {
 
-	public SettingsPage()
-	{
-		InitializeComponent();
-	}
+  public SettingsPage()
+  {
+    InitializeComponent();
+  }
 }
