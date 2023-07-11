@@ -1,4 +1,4 @@
-namespace CountryQuiz.Utils;
+﻿namespace CountryQuiz.Utils;
 
 // All the code in this file is only included on Android.
 public class PlatformClass1

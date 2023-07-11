@@ -1,10 +1,10 @@
-namespace CountryQuiz.ViewModels.Tests;
+﻿namespace CountryQuiz.ViewModels.Tests;
 
 public class UnitTest1
 {
-  [Fact]
-  public void ShouldInvokeSettingsNavigation()
-  {
+    [Fact]
+    public void ShouldInvokeSettingsNavigation()
+    {
 
-  }
+    }
 }
