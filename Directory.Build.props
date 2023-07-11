@@ -1,0 +1,9 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+</Project>
